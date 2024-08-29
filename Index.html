@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BYT Productions</title>
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -16,14 +16,20 @@
     <link rel="apple-touch-icon" sizes="180x180" href="ASSETS/MULTIMEDIA/IMG/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="ASSETS/MULTIMEDIA/IMG/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="ASSETS/MULTIMEDIA/IMG/favicon-16x16.png">
-    <link rel="manifest" href="ASSETS/MULTIMEDIA/IMG/site.webmanifest">
+    
+    <!-- Updated Manifest Link -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Theme Color Meta Tag -->
+    <meta name="theme-color" content="#0693E3">
 </head>
 <body>
-   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZKHQZTP"
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZKHQZTP"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-      <!-- Top Navigation Bar -->
+    
+    <!-- Top Navigation Bar -->
     <nav class="navbar">
         <div class="navbar-brand">
             <img src="ASSETS/MULTIMEDIA/IMG/logo.png" alt="BYT Productions Logo">
@@ -48,6 +54,19 @@
             <div class="bar"></div>
         </div>
     </nav>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                }, function(err) {
+                    console.log('Service Worker registration failed:', err);
+                });
+            });
+        }
+    </script>
 
     <script src="ASSETS/JS/script.js"></script>
 </body>
