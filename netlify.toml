@@ -1,0 +1,4 @@
+[[plugins]]
+  package = "netlify-plugin-image-optim"
+  [plugins.inputs]
+    # Add any required plugin options here
